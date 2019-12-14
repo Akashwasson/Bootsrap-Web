@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>login</title>
+    <style>
+    body{
+      text-align: center;
+      background-image: url(images/bg.jpg);
+      height: 100%; 
+/* Center and scale the image nicely */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    form{
+      width: 30%;
+      border-radius: 5%;
+      border:1px solid white;
+      margin-top: 90px;
+      display: inline-block;
+    }
+   
+    </style>
+</head>
+<body>
+        <form name="login">
+            <label style="font-size: 30px; color:white ">Login</label>
+            <div style="color: white; padding: 30px">
+                <div> username<input class="form-control" type="text" name="userid" autocomplete="off" placeholder="Hint: akash"></div>
+                <div>password<input class="form-control" type="password" name="pswrd" placeholder="Hint: pass123"></div>
+                <div>mobile no:<input class="form-control" type="number" name="mobile" autocomplete="off" placeholder="enter any 10 digits"> </div>
+                <div> <input class="form-check-label" type="checkbox" autocomplete="off"> Remember me</div>
+                <input type="button" class="btn my-2 bg-info" onclick="check(this.form)" value="login" style="color: white">
+           </div> </form>
+            <script language="javascript">
+                    function check(form){
+                       if(form.userid.value == "akash" && form.pswrd.value == "pass123")
+                         {
+                           var token={userid:'akash',pass:'akash123'};
+                           var x=localStorage.setItem('key',(JSON.stringify(token)));
+                         
+                           if(form.mobile.value.length==10) {
+                             var num=localStorage.getItem('num');
+                             
+                             if(num ==1){
+                             window.location.href='index.html';
+                             }
+                             else if(num ==2){
+                              window.location.href='video.html';
+                             }
+                             else if(num ==3){
+                               window.location.href='student dynamic cards crud opts.html'
+                             }
+                             else if(num ==4){
+                              window.location.href='student dynamic table.html'
+                             }
+                       }
+                      
+                       else{
+                         window.alert("Phone number must be 10 digits.");  /*opens the target page while Id & password matches*/
+                       }
+                       }
+                         else
+                        {
+                          alert("Error Password or Username ")/*displays error message*/
+             
+                      }
+                      }
+                      var key=localStorage.getItem('key');
+                      if(key!==null){
+                        alert('you have already logged in')
+                        window.location.href='index.html';
+                      }
+                            
+                      
+             
+                 </script>
+    
+</body>
+</html>

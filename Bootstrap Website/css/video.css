@@ -1,0 +1,62 @@
+ *{ margin: 0;}
+        .video{
+           text-align: center;
+           margin-top: 5%;
+        }
+        .video .link{
+            padding-top: 3%;
+            font-size:20px;
+            
+        }
+        .video .link a{
+            text-decoration: none;
+        }
+       
+        .btn a{
+            text-decoration: none;
+            font-size: 30px;
+            color: whitesmoke;
+            
+        }
+        a:hover{
+            color: black;
+        }
+        .write{
+            text-align: center;
+            color: blue;
+            font-size: 20px;
+            
+        }
+        .btn{
+            margin-top: 2%;
+            margin-left: 4%;
+            background-color: coral;
+            border-radius: 6px;
+          
+        }
+        .link a{
+            color: red;
+            padding-bottom: 10%;
+        }
+        .video1{
+            margin-top: 2%;
+           
+        }
+        .video1 button{
+            font-size: 20px;
+            color: white;
+            background-color:skyblue;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .video1 button:hover{
+            color: crimson;
+        }
+        .bottom{
+            margin-bottom: 3%;
+        }
+        .footer{
+            padding-top: 1%;
+            font-size: 15px;
+            padding-bottom:1%;
+        }

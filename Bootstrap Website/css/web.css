@@ -1,0 +1,81 @@
+* {box-sizing: border-box;}
+
+body { 
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+ 
+#navbar{
+    overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 50px 10px;
+  transition: 0.4s;
+  z-index: 0;
+  position:fixed;
+  width:100%;
+  top:0px;
+}
+ #navbar #logo {
+    transition: 0.4s;
+    margin-left: 50px;
+    z-index: 1;
+    height: 95px;
+  border-radius: 50%; /* makes it a circle */
+  } 
+#navbar a {
+    float: left;
+    color: black;
+    text-decoration: none;
+    font-size: 18px; 
+    line-height: 25px;
+    border-radius: 4px;
+    padding: 12px;
+    text-align: center;
+}
+
+#navbar-right{
+    float: right;
+   
+}
+#navbar a.active {
+    background-color: dodgerblue;
+    color: white;
+    margin-right: 8px;
+    
+  }
+  #navbar a:hover{
+    color: black;
+  }
+  #span {
+    margin-top:230px;
+     
+  }
+  #span a.active {
+    background-color: dodgerblue;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    padding: 12px;
+   
+  }
+  @media screen and (max-width: 580px) {
+    #navbar {
+      padding: 5px 10px !important; /* Use !important to make sure that JavaScript doesn't override the padding on small screens */
+    }
+    #navbar a {
+        float: none;
+        display: block;
+        text-align: left;
+        padding-bottom: 8px;
+      }
+      #navbar-right {
+        float: none;
+       
+      }
+      #span  {
+        margin-top: 280px;
+      }
+      #navbar #logo {
+      height: 65px;
+      }
+    }
